@@ -1,6 +1,13 @@
 :root {
 --main-color: #FFFFFF;
---secondmain-color: #2196F3;
+--second-main-color: #2196F3;
+--text-color: #757575;
+--head-color: #212121;
+--logo-color: #000000;
+--btn-color: #F5F4FA;
+--background-portfolio-color: #F5F5F5;
+--background-footer-color: #2F303A;
+--footer-address-color: rgba(255, 255, 255, 0.6);
 --tipical-lh: 1.19;
 --secondtipical-lh: 1.14;
 --main-font: 'Roboto', sans-serif;
@@ -42,7 +49,7 @@ font-weight: 700;
 font-size: 26px;
 line-height: var(--tipical-lh);
 letter-spacing: 0.03em;
-color: var(--secondmain-color);
+color: var(--second-main-color);
 }
 
 .header-logo {
@@ -51,11 +58,12 @@ font-weight: 700;
 font-size: 26px;
 line-height: var(--tipical-lh);
 letter-spacing: 0.03em;
-color: #000000;    
+color: var(--logo-color);    
 }
 
 
-.header-item {
+.header-item .header-link.current {
+    color:var(--second-main-color)
 }
 
 .header-link {
@@ -63,21 +71,21 @@ font-weight: 500;
 font-size: 14px;
 line-height: var(--secondtipical-lh);
 letter-spacing: 0.02em;
-color: #212121;
+color: var(--head-color);
 }
 .header-mail {
 font-weight: 500;
 font-size: 14px;
 line-height: var(--secondtipical-lh);
 letter-spacing: 0.02em;
-color: var(--secondmain-color);
+color: var(--text-color);
 }
 .header-tel {
 font-weight: 500;
 font-size: 14px;
 line-height: var(--secondtipical-lh);
 letter-spacing: 0.02em;
-color: #757575;
+color: var(--text-color);
 }
 .header-link:hover,
 .header-link:focus,
@@ -85,7 +93,7 @@ color: #757575;
 .header-tel:focus,
 .header-mail:hover,
 .header-mail:focus {
-    color: var(--secondmain-color);
+    color: var(--second-main-color);
 }
 .header-list {
 }
@@ -93,14 +101,14 @@ color: #757575;
 /*----------------------PORTFOLIO-------------------------*/
 
 .portfolio {
-    background-color: var(--main-color);
+    background-color: var(--background-portfolio-color);
 }
 .portfolio-list {
 }
 .portfolio-item {
 }
 .portfolio-btn {
-background-color: var(--secondmain-color);
+background-color: var(--btn-color);
 font-family: inherit;
 font-weight: 500;
 font-size: 16px;
@@ -108,27 +116,36 @@ line-height: 1.62;
 text-align: center;
 letter-spacing: 0.03em;
 cursor: pointer;
-color: var(--main-color);
+color: var(--head-color);
+border-color: transparent;
+border-radius: 4px;
 }
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+    color: var(--main-color);
+    background-color: var(--second-main-color);
+}
+
+
 .portfolio-head {
 font-weight: 700;
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
-color: #212121;
+color: var(--head-color);
 }
 .portfolio-text {
 font-weight: 400;
 font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.03em;
-color: #757575;
+color: var(--text-color);
 }
 
 /*----------------------FOOTER-------------------------*/
 
 .footer {
-    background-color: #2F303A;
+    background-color: var(--background-footer-color);
 }
 .footer-logo span {
 font-family: 'Raleway', sans-serif;
@@ -136,7 +153,7 @@ font-weight: 700;
 font-size: 26px;
 line-height: var(--tipical-lh);
 letter-spacing: 0.03em;
-color: var(--secondmain-color);
+color: var(--second-main-color);
 }
 
 .footer-logo{
@@ -166,5 +183,12 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+color: var(--footer-address-color);
+}
+
+.footer-address-link:hover,
+.footer-address-link:focus,
+.footer-address-contact:hover,
+.footer-address-contact:focus {
+    color: var(--second-main-color);
 }
